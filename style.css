@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+body
+{
+    margin:0 10vw;;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    position: relative;
+}
+header h1{
+    font-size: 130%;
+}
+header nav ul li{
+list-style-type: none;
+display: inline;
+
+}
+header nav>a{
+    text-decoration: none;
+    color: #323A45;
+    position: absolute;
+    bottom: 2vh;
+    right: 1vw;
+    visibility: hidden;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-family: 'Karla', sans-serif;
+    color: #323A45 ;
+    padding-left: 5vw;
+    font-size: 100%;
+}
+header nav ul{
+    padding: 0;
+}
+header nav ul li:hover{
+   opacity: .5;
+}
+header h1:hover{
+    opacity: .5;
+    cursor: pointer;
+}
+
+
+
+
+
+
+img{
+    width: 100%;
+    height: 70vh;
+}
+.page1 ,
+.page2 ,
+.page3,
+.page4,
+.page5{
+    display: grid;
+    grid-template-areas: "photo1 photo1 photo1"
+                         "photo2 photo3 photo4"
+                        "photo5 photo6 photo7";
+    grid-gap: 2vw;
+}
+.photo1{ grid-area: photo1; cursor: pointer; }
+.photo2{ grid-area: photo2; cursor: pointer; }
+.photo3{ grid-area: photo3; cursor: pointer;}
+.photo4{ grid-area: photo4; cursor: pointer; }
+.photo5{ grid-area: photo5; cursor: pointer;}
+.photo6{ grid-area: photo6; cursor: pointer;}
+.photo7{ grid-area: photo7; cursor: pointer;}
+
+img:hover{ opacity: .5; }
+
+
+.photo1 article{
+    display: flex;
+    flex-direction: column;
+}
+.bottom-photo-ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.bottom-photo-ul li{
+  font-size: 100%;
+}
+.page1 p,
+.page2 p,
+.page3 p,
+.page4 p,
+.page5 p{
+    color: gainsboro;
+    font-size: 90%;
+}
+
+.lastpage{
+    display: grid;
+    grid-template-areas:"first lastpage-middle lastpage-end";
+}
+.lastpage-first{grid-area:first;}
+.lastpage-middle{grid-area: lastpage-middle;}
+.lastpage-end{grid-area: lastpage-end;}
+
+
+.lastpage article:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    
+}
+.lastpage article:nth-of-type(3)
+{
+display: flex;
+flex-direction: column;
+
+
+}
+.lastpage-middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+     
+}
+@media only screen and (max-width: 1024px)
+{
+    header h1{
+        font-size: 100%;
+    }
+    header nav ul li a{
+       
+        font-size: 80%;
+    }
+    img{
+        width: 100%;
+        height: 60vh;
+    }
+.page1,
+.page2,
+.page3,
+.page4,
+.page5
+{
+    display: grid;
+    grid-template-areas: "photo1 photo1"
+                         "photo2 photo3"
+                         "photo4 photo5"
+                         "photo6 photo7";
+}
+
+  
+.lastpage{
+    display: grid;
+    grid-template-areas:"first"
+                        "lastpage-middle"
+                        "lastpage-end";
+}
+.lastpage-middle{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+     
+}
+}
+@media only screen and (max-width: 600px)
+{
+    header h1{
+        font-size: 100%;
+        height: 1vh;
+    }
+    header nav>a{
+        visibility: visible;
+        position: absolute;
+        top:1.5vh;
+    }
+    .menu{
+       visibility: hidden;
+       display: flex;
+       flex-direction: column;
+       position: absolute;
+       top:4vh;
+       right:1vw;
+       height: 1vh;
+       margin: 0;
+       padding: 0;
+    }
+    header nav{
+        width: 5vh;
+    }
+    header{
+        display: relative;
+        margin-bottom: 2vh;
+    }
+    
+   .active:hover ~ .menu ,.menu:hover{
+        visibility: visible; 
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+.page1,
+.page2,
+.page3,
+.page4,
+.page5
+{
+    display: grid;
+    grid-template-areas: "photo1"
+                         "photo2"
+                         "photo3"
+                         "photo4"
+                         "photo5"
+                         "photo6"
+                         "photo7";
+                         
+}
+.bottom-photo-ul li{
+    font-size: 70%;
+  }
+  .page1 p,
+  .page2 p,
+  .page3 p,
+  .page4 p,
+  .page5 p{
+      color: gainsboro;
+      font-size: 60%;
+  }
+.lastpage{
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+}
